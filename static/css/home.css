@@ -1,0 +1,137 @@
+body {
+  margin: 0px;
+  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
+}
+
+
+header {
+  margin: 0px;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.867);
+}
+
+nav {
+  width: 400px;
+  height:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left:200px;
+}
+
+.nav-el {
+    text-decoration:None;
+    color:grey;
+    font-weight: 500;
+    col
+}
+
+.nav-el:hover {
+  color: white;
+  cursor: pointer;
+}
+
+
+.active {
+  margin: 0px;
+  background-color: black;
+  padding: 13px 20px;
+}
+
+main {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  display: flex;
+  width: 100vw;
+  align-items: center;
+}
+
+.date-form {
+  width: 40%;
+}
+
+.tab {
+  width: 600px;
+  font-size: 1.1rem;
+  margin-top: 40px;
+}
+
+.tab .elements {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 40px);
+  border-left: 2px solid brown;
+  border-right: 2px solid brown;
+  border-bottom: 2px solid brown;
+  padding-bottom: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.tab-el {
+  padding: 20px 10px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-el:hover {
+  background-color: rgba(215, 211, 211, 0.424);
+  border-radius: 10px;
+}
+
+.tab-header {
+  margin-top: 10px;
+  background-color: brown;
+  padding: 1px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  color: white;
+  padding-left: 10px;
+}
+
+.detail {
+  cursor: pointer;
+}
+
+input[type="text"] {
+  margin-top: 5px;
+  width: 100%;
+  height: 34px;
+  border-radius: 4px;
+  border: none;
+  padding-left: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px inset;
+  color: rgb(85, 85, 85);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(204, 204, 204);
+  border-image: initial;
+  border-radius: 4px;
+}
+
+input[type="text"]:focus {
+  border: 1px solid #0c0;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+.date-submit-btn {
+  margin-top: 15px;
+  color: white;
+  border: None;
+  padding: 6px 15px;
+  background-color: rgba(0, 0, 255, 0.735);
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.date-submit-btn:hover {
+  opacity: 0.9;
+}
+

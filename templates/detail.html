@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Food App</title>
+    <link href="{{ url_for('static', filename='css/detail.css') }}" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&family=Rubik:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    {% include 'header.html' %}
+
+    <main>
+      <div class="date-form">
+        <form id="date-form" action="" method="POST">
+          <p>{{ date }}</p>
+          <select class="choose-option" name="food-select">
+            <option value="">--Choose and option--</option>
+            {% for el in food_options %}
+            <option value="{{ el.food_id }}">{{ el.food_name }}</option>
+            {% endfor %}
+          </select>
+          <input class="date-submit-btn" type="submit" value="Add" />
+        </form>
+      </div>
+
+      <div class="tab">
+        
+        <div class="elements">
+          <div class="tab-el-name">
+            <p>Total</p>
+          </div>
+
+          <div class="tab-el">
+            <p>Protein: <span class="badge">{{ total.protein }}</span></p>
+          </div>
+
+          <div class="tab-el">
+            <p>Carbohydrates: <span class="badge">{{ total.carbohydrates }}</span></p>
+          </div>
+
+          <div class="tab-el">
+            <p>Fats: <span class="badge">{{ total.fats }}</span></p>
+          </div>
+
+          <div class="tab-el">
+            <p>Calories: <span class="badge">{{ total.calories }}</span></p>
+          </div>
+        </div>
+
+        {% for el in food_results %}
+        <div class="tab">
+          <div class="elements">
+  
+            <div class="tab-el-name">
+              <p>{{ el.food_name }}</p>
+            </div>
+  
+            <div class="tab-el">
+              <p>Protein: <span class="badge">{{ el.protein }}</span></p>
+            </div>
+  
+            <div class="tab-el">
+              <p>Carbohydrates: <span class="badge">{{ el.carbohydrates }}</span></p>
+            </div>
+  
+            <div class="tab-el">
+              <p>Fats: <span class="badge">{{ el.fats }}</span></p>
+            </div>
+  
+            <div class="tab-el">
+              <p>Calories: <span class="badge">{{ el.calories }}</span></p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </main>
+  <script src="static/js/scr.js"></script>
+  </body>
+</html>

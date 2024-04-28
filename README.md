@@ -1,4 +1,4 @@
-# FoodTrackerApp
+# Flask FoodTrackerApp
 This is a simple Food Tracker Flask app.
 In this project I practised in writing raw SQL queries as well as got familiar with Flask framework.
 Using this application, you can keep track of the amount of calories you absorbed throughout a particular day.
